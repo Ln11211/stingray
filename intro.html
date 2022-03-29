@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Stingray and Spectral Timing: A Brief Introduction &#8212; stingray v1.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-astropy.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Downloading and Installing Stingray" href="install.html" />
+    <link rel="prev" title="Stingray: Next-Generation Spectral Timing" href="index.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="index.html"><span id="logotext1">Sting</span><span id="logotext2">ray</span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="genindex.html">Index</a></li>
+    <li><a title="Module Index" href="py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="install.html" title="Downloading and Installing Stingray">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="index.html" title="Stingray: Next-Generation Spectral Timing">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="index.html">stingray v1.0</a>
+	 &#187;
+      </li>
+      
+      <li>Stingray and Spectral Timing: A Brief Introduction</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="stingray-and-spectral-timing-a-brief-introduction">
+<h1>Stingray and Spectral Timing: A Brief Introduction<a class="headerlink" href="#stingray-and-spectral-timing-a-brief-introduction" title="Permalink to this headline">¶</a></h1>
+<p>Stingray is a Python library designed to perform times series analysis and related tasks on astronomical light curves.
+It supports a range of commonly-used Fourier analysis techniques, as well as extensions for analyzing pulsar data, simulating data sets, and statistical modelling.
+Stingray is designed to be easy to extend, and easy to incorporate into data analysis workflows and pipelines.</p>
+<p>For a brief overview of the history and state-of-the-art in spectral timing, and for more information about the design and capabilities of Stingray, please refer to <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019ApJ...881...39H/abstract">Huppenkothen et al. (2019)</a>.</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<section id="current-capabilities">
+<h3>Current Capabilities<a class="headerlink" href="#current-capabilities" title="Permalink to this headline">¶</a></h3>
+<p>Currently implemented functionality in this library comprises:</p>
+<ul class="simple">
+<li><p>loading event lists from fits files of a few missions (RXTE/PCA, NuSTAR/FPM, XMM-Newton/EPIC, NICER/XTI)</p></li>
+<li><p>constructing light curves from event data, various operations on light curves (e.g. addition, subtraction, joining, and truncation)</p></li>
+<li><p>Good Time Interval operations</p></li>
+<li><p>power spectra in Leahy, rms normalization, absolute rms and no normalization</p></li>
+<li><p>averaged power spectra</p></li>
+<li><p>dynamical power spectra</p></li>
+<li><p>maximum likelihood fitting of periodograms/parametric models</p></li>
+<li><p>(averaged) cross spectra</p></li>
+<li><p>coherence, time lags</p></li>
+<li><p>cross correlation functions</p></li>
+<li><p>RMS spectra and lags (time vs energy, time vs frequency); <em>needs testing</em></p></li>
+<li><p>covariance spectra; <em>needs testing</em></p></li>
+<li><p>bispectra; <em>needs testing</em></p></li>
+<li><p>(Bayesian) quasi-periodic oscillation searches</p></li>
+<li><p>simulating a light curve with a given power spectrum</p></li>
+<li><p>simulating a light curve from another light curve and a 1-d (time) or 2-d (time-energy) impulse response</p></li>
+<li><p>simulating an event list from a given light curve _and_ with a given energy spectrum</p></li>
+<li><p>pulsar searches with Epoch Folding, <span class="math notranslate nohighlight">\(Z^2_n\)</span> test</p></li>
+</ul>
+</section>
+<section id="future-plans">
+<h3>Future Plans<a class="headerlink" href="#future-plans" title="Permalink to this headline">¶</a></h3>
+<p>We welcome feature requests: if you need a particular tool that’s currently not available or have a new method you think might be usefully implemented in Stingray, please <a class="reference internal" href="contributing.html"><span class="doc">get in touch</span></a>!</p>
+<p>Other future additions we are currently implementing are:</p>
+<ul class="simple">
+<li><p>bicoherence</p></li>
+<li><p>phase-resolved spectroscopy of quasi-periodic oscillations</p></li>
+<li><p>Fourier-frequency-resolved spectroscopy</p></li>
+<li><p>power colours</p></li>
+<li><p>full HEASARC-compatible mission support</p></li>
+<li><p>pulsar searches with <span class="math notranslate nohighlight">\(H\)</span>-test</p></li>
+<li><p>binary pulsar searches</p></li>
+</ul>
+</section>
+<section id="platform-specific-issues">
+<h3>Platform-specific issues<a class="headerlink" href="#platform-specific-issues" title="Permalink to this headline">¶</a></h3>
+<p>Windows uses an internal 32-bit representation for <code class="docutils literal notranslate"><span class="pre">int</span></code>. This might create numerical errors when using large integer numbers (e.g. when calculating the sum of a light curve, if the <code class="docutils literal notranslate"><span class="pre">lc.counts</span></code> array is an integer).
+On Windows, we automatically convert the <code class="docutils literal notranslate"><span class="pre">counts</span></code> array to float. The small numerical errors should be a relatively small issue compare to the above.</p>
+</section>
+</section>
+<section id="presentations">
+<h2>Presentations<a class="headerlink" href="#presentations" title="Permalink to this headline">¶</a></h2>
+<p>Members of the Stingray team have given a number of presentations which introduce Stingray.
+These include:
+- <a class="reference external" href="https://github.com/abigailStev/timeseries-tutorial">2nd Severo Ochoa School on Statistics, Data Mining, and Machine Learning (2021)</a>
+- <a class="reference external" href="https://speakerdeck.com/abigailstev/time-series-exploration-with-stingray">9th Microquasar Workshop (2021)</a>
+- <a class="reference external" href="http://ascl.net/wordpress/2018/05/24/software-in-astronomy-symposium-presentations-part-3/">European Week of Astronomy and Space Science (2018)</a>
+- <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020ASPC..522..521M/abstract">ADASS (Astronomical Data Analysis Software and Systems; meeting 2017, proceedings 2020)</a>
+- <a class="reference external" href="https://speakerdeck.com/abigailstev/stingray-open-source-spectral-timing-software">AAS 16th High-Energy Astrophysics Division meeting (2017)</a>
+- <a class="reference external" href="http://ascl.net/wordpress/2017/07/23/special-session-on-and-about-software-at-ewass-2017/">European Week of Astronomy and Space Science 2017</a>
+- <a class="reference external" href="https://speakerdeck.com/abigailstev/stingray-pyastro16">Python in Astronomy (2016)</a></p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">Stingray and Spectral Timing: A Brief Introduction</a><ul>
+<li><a class="reference internal" href="#features">Features</a><ul>
+<li><a class="reference internal" href="#current-capabilities">Current Capabilities</a></li>
+<li><a class="reference internal" href="#future-plans">Future Plans</a></li>
+<li><a class="reference internal" href="#platform-specific-issues">Platform-specific issues</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#presentations">Presentations</a></li>
+</ul>
+</li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="_sources/intro.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2022, Stingray Developers.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 4.5.0. &nbsp;
+    Last built 29 Mar 2022. <br/>
+  </p>
+</footer>
+  </body>
+</html>

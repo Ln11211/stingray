@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Stingray: Next-Generation Spectral Timing &#8212; stingray v1.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-astropy.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Stingray and Spectral Timing: A Brief Introduction" href="intro.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="#"><span id="logotext1">Sting</span><span id="logotext2">ray</span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="genindex.html">Index</a></li>
+    <li><a title="Module Index" href="py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="intro.html" title="Stingray and Spectral Timing: A Brief Introduction">
+	  next &raquo;
+	</a>
+      </li>
+      <li>
+	<a href="#">stingray v1.0</a>
+	 &#187;
+      </li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="stingray-next-generation-spectral-timing">
+<h1>Stingray: Next-Generation Spectral Timing<a class="headerlink" href="#stingray-next-generation-spectral-timing" title="Permalink to this headline">¶</a></h1>
+<p>Stingray is a community-developed astrophysical spectral-timing software package written in Python.</p>
+<a class="reference internal image-reference" href="_images/stingray_logo.png"><img alt="Stingray logo, outline of a stingray on top of a graph of the power spectrum of an X-ray binary" class="align-center" src="_images/stingray_logo.png" style="width: 280.0px; height: 279.2px;" /></a>
+<p>There are a number of official software packages for X-ray spectral fitting (XSPEC, ISIS, Sherpa, …).
+Such a widely used and standard software package does not exist for X-ray timing, so until now it has mainly been the domain of custom, proprietary software.
+Stingray originated during the 2016 workshop <a class="reference external" href="http://www.lorentzcenter.nl/lc/web/2016/720/info.php3?wsid=720&amp;venue=Oort/">The X-ray Spectral-Timing Revolution</a>: a group of X-ray astronomers and developers decided to agree on a common platform to develop a new software package.
+The goals were to merge existing efforts towards a timing package in Python, following the best guidelines for modern open-source programming, thereby providing the basis for developing spectral-timing analysis tools.
+This software provides an easily accessible scripting interface, a GUI, and an API for experienced coders.
+Stingray’s ultimate goal is to provide the community with a package that eases the learning curve for advanced spectral-timing techniques, with a correct statistical framework.</p>
+<p>Further spectral-timing functionality, in particularly command line scripts based on the API defined within Stingray, is available in the package <a class="reference external" href="https://github.com/StingraySoftware/HENDRICS">HENDRICS</a>.
+A graphical user interface is under development as part of the project <a class="reference external" href="https://github.com/StingraySoftware/dave">DAVE</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you use Stingray for work presented in a publication or talk, please help the project by providing a proper <a class="reference internal" href="citing.html"><span class="doc">citation</span></a>.</p>
+</div>
+<section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Stingray and Spectral Timing: A Brief Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#presentations">Presentations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Downloading and Installing Stingray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#installing-via-conda">Installing via <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#installing-via-pip">Installing via <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#installing-from-source-bleeding-edge-version">Installing from source (bleeding edge version)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#installing-development-environment-for-new-contributors">Installing development environment (for new contributors)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#test-suite">Test Suite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core Stingray Functionality</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="core.html#working-with-event-data">Working with Event Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#working-with-lightcurves">Working with Lightcurves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#fourier-analysis">Fourier Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dataexplo.html">Data Exploration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dataexplo.html#a-quick-look-at-a-nustar-observation">A quick look at a NuSTAR observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataexplo.html#spectral-timing-exploration-with-nicer">Spectral timing exploration with NICER</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modeling.html">The Stingray Modelling Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Modeling/ModelingExamples.html">The Stingray Modeling API Explained</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">Stingray Simulator (<code class="xref py py-obj docutils literal notranslate"><span class="pre">stingray.simulator</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#channel-simulation">Channel Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#tutorials">Tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pulsar.html">Analysing Pulsar Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Pulsar/Pulsar%20search%20with%20epoch%20folding%20and%20Z%20squared.html">Simulate a dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Pulsar/Pulsar%20search%20with%20epoch%20folding%20and%20Z%20squared.html#Pulsation-search-with-epoch-folding.">Pulsation search with epoch folding.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Pulsar/Pulsar%20search%20with%20epoch%20folding%20and%20Z%20squared.html#Z-squared-search">Z-squared search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Pulsar/Pulsar%20search%20with%20epoch%20folding%20and%20Z%20squared.html#Thresholding">Thresholding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Pulsar/Pulsar%20search%20with%20epoch%20folding%20and%20Z%20squared.html#Fit-peak-with-Sinc-squared-and-Gaussian-functions">Fit peak with Sinc-squared and Gaussian functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Pulsar/Pulsar%20search%20with%20epoch%20folding%20and%20Z%20squared.html#Phaseogram">Phaseogram</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deadtime.html">Dealing with dead time</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Deadtime/Check%20dead%20time%20model%20in%20Stingray.html">Check Stingray’s dead time model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Deadtime/Check%20FAD%20correction%20in%20Stingray.html">Fourier Amplitude Difference correction in Stingray</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Stingray API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#data-classes">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#fourier-products">Fourier Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#higher-order-fourier-and-spectral-timing-products">Higher-Order Fourier and Spectral Timing Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#modeling">Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#pulsar">Pulsar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#simulator">Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="history.html#changelog">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#previous-projects-merged-to-stingray">Previous projects merged to Stingray</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Get Help, Report Bugs or Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs-and-issues-getting-help-providing-feedback">Reporting Bugs and Issues, Getting Help, Providing Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#getting-involved-with-development">Getting Involved with Development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="citing.html">Citing Stingray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="citing.html#id1">DOI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="citing.html#papers">Papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="citing.html#other-useful-references">Other Useful References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+</div>
+</section>
+<section id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">Stingray: Next-Generation Spectral Timing</a><ul>
+<li><a class="reference internal" href="#contents">Contents</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="_sources/index.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2022, Stingray Developers.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 4.5.0. &nbsp;
+    Last built 29 Mar 2022. <br/>
+  </p>
+</footer>
+  </body>
+</html>
